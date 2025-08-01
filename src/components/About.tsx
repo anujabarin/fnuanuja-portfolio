@@ -1,28 +1,13 @@
-import { Card, CardContent } from '@/components/ui/card';
-import { Code, Database, Server, Zap } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
 
 const About = () => {
-  const highlights = [
-    {
-      icon: Code,
-      title: "Clean Code",
-      description: "Writing maintainable, scalable code with best practices"
-    },
-    {
-      icon: Database,
-      title: "Data Systems",
-      description: "Designing efficient data pipelines and analytics platforms"
-    },
-    {
-      icon: Server,
-      title: "Backend Engineering",
-      description: "Building robust APIs and distributed systems"
-    },
-    {
-      icon: Zap,
-      title: "Performance",
-      description: "Optimizing applications for speed and reliability"
-    }
+  const keyStrengths = [
+    "Backend Engineering",
+    "Data Systems", 
+    "Distributed Computing",
+    "API Development",
+    "Performance Optimization",
+    "Cloud Architecture"
   ];
 
   return (
@@ -41,49 +26,45 @@ const About = () => {
           </div>
 
           {/* Main content */}
-          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-            <div className="space-y-6">
-              <p className="text-foreground leading-relaxed">
+          <div className="text-center max-w-3xl mx-auto">
+            <div className="space-y-8 animate-fade-in">
+              <p className="text-lg text-foreground leading-relaxed">
                 I'm a software engineer with <strong>5+ years of experience</strong> in building 
                 scalable backend systems and data-driven applications. My journey started with a 
                 computer science degree and has evolved through hands-on experience with 
                 distributed systems, cloud architectures, and big data technologies.
               </p>
               
-              <p className="text-foreground leading-relaxed">
+              <p className="text-lg text-foreground leading-relaxed">
                 I specialize in <strong>backend engineering</strong> and <strong>data systems</strong>, 
                 with expertise in Python, Java, and modern frameworks. I'm passionate about 
                 solving complex problems, optimizing performance, and building systems that can 
                 scale from thousands to millions of users.
               </p>
               
-              <p className="text-foreground leading-relaxed">
+              <p className="text-lg text-foreground leading-relaxed">
                 When I'm not coding, you can find me exploring new technologies, contributing to 
                 open source projects, or sharing knowledge with the developer community through 
                 blog posts and technical talks.
               </p>
-            </div>
-            
-            <div className="space-y-4">
-              {highlights.map((item, index) => (
-                <Card key={index} className="shadow-card border-border/50">
-                  <CardContent className="p-6">
-                    <div className="flex items-center gap-4">
-                      <div className="p-3 bg-primary/10 rounded-lg">
-                        <item.icon className="h-6 w-6 text-primary" />
-                      </div>
-                      <div>
-                        <h3 className="font-heading font-semibold text-foreground mb-1">
-                          {item.title}
-                        </h3>
-                        <p className="text-sm text-muted-foreground">
-                          {item.description}
-                        </p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
+
+              {/* Key strengths as badges */}
+              <div className="pt-8">
+                <h3 className="font-heading text-xl font-semibold text-foreground mb-6">
+                  Key Strengths
+                </h3>
+                <div className="flex flex-wrap gap-3 justify-center">
+                  {keyStrengths.map((strength, index) => (
+                    <Badge 
+                      key={index}
+                      variant="secondary"
+                      className="text-sm font-medium hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover-scale cursor-default"
+                    >
+                      {strength}
+                    </Badge>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
