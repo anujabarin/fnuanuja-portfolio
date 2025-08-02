@@ -21,7 +21,7 @@ const About = () => {
             </h2>
             <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              A passionate software engineer with a love for backend systems and data engineering
+              A passionate software engineer with a love for backend systems and data engg
             </p>
           </div>
 
