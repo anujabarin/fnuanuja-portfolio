@@ -15,9 +15,9 @@
     --popover: 220 15% 10%;
     --popover-foreground: 210 40% 95%;
 
-    --primary: 222 75% 60%;
+    --primary: 270 75% 65%;
     --primary-foreground: 220 15% 8%;
-    --primary-glow: 222 85% 70%;
+    --primary-glow: 280 85% 75%;
 
     --secondary: 220 10% 15%;
     --secondary-foreground: 210 30% 85%;
@@ -25,7 +25,7 @@
     --muted: 220 10% 12%;
     --muted-foreground: 215 20% 60%;
 
-    --accent: 200 80% 55%;
+    --accent: 290 80% 60%;
     --accent-foreground: 220 15% 8%;
 
     --destructive: 0 70% 55%;
@@ -33,23 +33,26 @@
 
     --border: 220 10% 18%;
     --input: 220 10% 18%;
-    --ring: 222 75% 60%;
+    --ring: 270 75% 65%;
 
-    /* Custom portfolio colors - Dark theme */
-    --portfolio-blue: 222 75% 60%;
-    --portfolio-light-blue: 200 80% 55%;
-    --portfolio-purple: 260 65% 60%;
+    /* Custom portfolio colors - Purple theme */
+    --portfolio-purple: 270 75% 65%;
+    --portfolio-light-purple: 280 80% 70%;
+    --portfolio-deep-purple: 260 70% 55%;
+    --portfolio-pink: 320 65% 60%;
     --portfolio-gray: 215 20% 60%;
     --portfolio-dark-gray: 220 10% 15%;
 
-    /* Gradients - Dark theme */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--portfolio-blue)), hsl(var(--portfolio-light-blue)));
+    /* Gradients - Purple theme */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--portfolio-purple)), hsl(var(--portfolio-pink)));
     --gradient-section: linear-gradient(180deg, hsl(var(--background)), hsl(var(--portfolio-dark-gray)));
+    --gradient-animated: linear-gradient(45deg, hsl(var(--portfolio-purple)), hsl(var(--portfolio-light-purple)), hsl(var(--portfolio-pink)), hsl(var(--portfolio-deep-purple)));
     
-    /* Shadows - Enhanced for dark theme */
-    --shadow-soft: 0 4px 30px -2px hsl(var(--portfolio-blue) / 0.2);
-    --shadow-card: 0 10px 40px -4px hsl(var(--portfolio-blue) / 0.15);
-    --shadow-button: 0 6px 20px -2px hsl(var(--portfolio-blue) / 0.3);
+    /* Shadows - Enhanced for purple theme */
+    --shadow-soft: 0 4px 30px -2px hsl(var(--portfolio-purple) / 0.2);
+    --shadow-card: 0 10px 40px -4px hsl(var(--portfolio-purple) / 0.15);
+    --shadow-button: 0 6px 20px -2px hsl(var(--portfolio-purple) / 0.3);
+    --shadow-glow: 0 0 40px hsl(var(--portfolio-light-purple) / 0.3);
 
     /* Typography */
     --font-heading: 'Inter', system-ui, sans-serif;
@@ -101,15 +104,15 @@
 
     --border: 220 10% 15%;
     --input: 220 10% 15%;
-    --ring: 222 85% 65%;
+    --ring: 270 85% 65%;
     --sidebar-background: 220 15% 7%;
     --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 222 85% 65%;
+    --sidebar-primary: 270 85% 65%;
     --sidebar-primary-foreground: 220 15% 5%;
     --sidebar-accent: 220 10% 12%;
     --sidebar-accent-foreground: 210 40% 98%;
     --sidebar-border: 220 10% 15%;
-    --sidebar-ring: 222 85% 65%;
+    --sidebar-ring: 270 85% 65%;
   }
 }
 
@@ -120,5 +123,116 @@
 
   body {
     @apply bg-background text-foreground;
+    background-attachment: fixed;
+  }
+}
+
+@layer utilities {
+  /* Animated background elements */
+  .animated-bg {
+    background: linear-gradient(45deg, 
+      hsl(var(--portfolio-purple) / 0.1), 
+      hsl(var(--portfolio-light-purple) / 0.1), 
+      hsl(var(--portfolio-pink) / 0.1), 
+      hsl(var(--portfolio-deep-purple) / 0.1));
+    background-size: 400% 400%;
+    animation: gradient-shift 15s ease infinite;
+  }
+
+  .floating-shapes::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    background-image: 
+      radial-gradient(circle at 20% 80%, hsl(var(--portfolio-purple) / 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, hsl(var(--portfolio-pink) / 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 40% 40%, hsl(var(--portfolio-light-purple) / 0.1) 0%, transparent 50%);
+    animation: float 20s ease-in-out infinite;
+  }
+
+  .floating-shapes::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    background-image: 
+      radial-gradient(circle at 60% 70%, hsl(var(--portfolio-deep-purple) / 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 90% 60%, hsl(var(--portfolio-purple) / 0.05) 0%, transparent 50%);
+    animation: float 25s ease-in-out infinite reverse;
+  }
+
+  /* Animation keyframes */
+  @keyframes gradient-shift {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px) rotate(0deg);
+      opacity: 0.3;
+    }
+    33% {
+      transform: translateY(-30px) rotate(120deg);
+      opacity: 0.6;
+    }
+    66% {
+      transform: translateY(20px) rotate(240deg);
+      opacity: 0.4;
+    }
+  }
+
+  /* Enhanced animations */
+  .animate-glow {
+    animation: glow 3s ease-in-out infinite alternate;
+  }
+
+  @keyframes glow {
+    from {
+      box-shadow: 0 0 20px hsl(var(--portfolio-purple) / 0.2);
+    }
+    to {
+      box-shadow: 0 0 30px hsl(var(--portfolio-light-purple) / 0.4), 
+                  0 0 40px hsl(var(--portfolio-pink) / 0.2);
+    }
+  }
+
+  .animate-bounce-gentle {
+    animation: bounce-gentle 6s ease-in-out infinite;
+  }
+
+  @keyframes bounce-gentle {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .animate-pulse-slow {
+    animation: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes pulse-slow {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.7;
+    }
   }
 }

@@ -58,9 +58,10 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				portfolio: {
-					blue: 'hsl(var(--portfolio-blue))',
-					'light-blue': 'hsl(var(--portfolio-light-blue))',
 					purple: 'hsl(var(--portfolio-purple))',
+					'light-purple': 'hsl(var(--portfolio-light-purple))',
+					'deep-purple': 'hsl(var(--portfolio-deep-purple))',
+					pink: 'hsl(var(--portfolio-pink))',
 					gray: 'hsl(var(--portfolio-gray))',
 					'dark-gray': 'hsl(var(--portfolio-dark-gray))'
 				},
@@ -77,12 +78,14 @@ export default {
 			},
 			backgroundImage: {
 				'gradient-hero': 'var(--gradient-hero)',
-				'gradient-section': 'var(--gradient-section)'
+				'gradient-section': 'var(--gradient-section)',
+				'gradient-animated': 'var(--gradient-animated)'
 			},
 			boxShadow: {
 				'soft': 'var(--shadow-soft)',
 				'card': 'var(--shadow-card)',
-				'button': 'var(--shadow-button)'
+				'button': 'var(--shadow-button)',
+				'glow': 'var(--shadow-glow)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -105,11 +108,29 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'gradient-shift': {
+					'0%, 100%': { backgroundPosition: '0% 50%' },
+					'50%': { backgroundPosition: '100% 50%' }
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0px) rotate(0deg)', opacity: '0.3' },
+					'33%': { transform: 'translateY(-30px) rotate(120deg)', opacity: '0.6' },
+					'66%': { transform: 'translateY(20px) rotate(240deg)', opacity: '0.4' }
+				},
+				'glow': {
+					'from': { boxShadow: '0 0 20px hsl(var(--portfolio-purple) / 0.2)' },
+					'to': { boxShadow: '0 0 30px hsl(var(--portfolio-light-purple) / 0.4), 0 0 40px hsl(var(--portfolio-pink) / 0.2)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'gradient-shift': 'gradient-shift 15s ease infinite',
+				'float': 'float 20s ease-in-out infinite',
+				'glow': 'glow 3s ease-in-out infinite alternate',
+				'bounce-gentle': 'bounce-gentle 6s ease-in-out infinite',
+				'pulse-slow': 'pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite'
 			}
 		}
 	},

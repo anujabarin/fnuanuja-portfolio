@@ -24,8 +24,8 @@ const Hero = () => {
           {/* Content */}
           <div className="text-center lg:text-left">
             <div className="mb-6">
-              <h1 className="font-heading text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
-                Hi, I'm <span className="text-primary-glow">Anuja</span>
+              <h1 className="font-heading text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight animate-fade-in">
+                Hi, I'm <span className="text-primary-glow animate-glow">Anuja</span>
               </h1>
               <h2 className="font-heading text-xl lg:text-2xl text-white/90 mb-6">
                 Software Engineer | Backend & Data Enthusiast
@@ -40,13 +40,13 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
               <Button 
                 onClick={() => scrollToSection('projects')}
-                className="bg-white text-primary hover:bg-white/90 shadow-button font-medium"
+                className="bg-white text-primary hover:bg-white/90 shadow-glow font-medium animate-glow hover-scale"
               >
                 View My Work
               </Button>
               <Button 
                 variant="outline" 
-                className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm"
+                className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm hover-scale"
                 onClick={() => scrollToSection('contact')}
               >
                 Get In Touch
@@ -55,16 +55,16 @@ const Hero = () => {
             
             {/* Social links */}
             <div className="flex gap-4 justify-center lg:justify-start">
-              <Button variant="ghost" size="icon" className="text-white hover:bg-white/10">
+              <Button variant="ghost" size="icon" className="text-white hover:bg-white/10 hover-scale">
                 <Github className="h-5 w-5" />
               </Button>
-              <Button variant="ghost" size="icon" className="text-white hover:bg-white/10">
+              <Button variant="ghost" size="icon" className="text-white hover:bg-white/10 hover-scale">
                 <Linkedin className="h-5 w-5" />
               </Button>
-              <Button variant="ghost" size="icon" className="text-white hover:bg-white/10">
+              <Button variant="ghost" size="icon" className="text-white hover:bg-white/10 hover-scale">
                 <Mail className="h-5 w-5" />
               </Button>
-              <Button variant="ghost" size="icon" className="text-white hover:bg-white/10">
+              <Button variant="ghost" size="icon" className="text-white hover:bg-white/10 hover-scale">
                 <Download className="h-5 w-5" />
               </Button>
             </div>
@@ -72,17 +72,18 @@ const Hero = () => {
           
           {/* Image */}
           <div className="flex justify-center lg:justify-end">
-            <div className="relative">
-              <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-card border-4 border-white/20 backdrop-blur-sm">
+            <div className="relative animate-bounce-gentle">
+              <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-glow border-4 border-white/20 backdrop-blur-sm">
                 <img 
                   src={heroImage} 
                   alt="Anuja - Software Engineer" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover hover-scale"
                 />
               </div>
-              {/* Floating elements */}
-              <div className="absolute -top-4 -right-4 w-20 h-20 bg-accent rounded-full opacity-80 animate-pulse"></div>
-              <div className="absolute -bottom-6 -left-6 w-16 h-16 bg-primary-glow rounded-full opacity-60 animate-pulse delay-1000"></div>
+              {/* Floating elements with new colors */}
+              <div className="absolute -top-4 -right-4 w-20 h-20 bg-portfolio-pink rounded-full opacity-80 animate-pulse-slow"></div>
+              <div className="absolute -bottom-6 -left-6 w-16 h-16 bg-portfolio-light-purple rounded-full opacity-60 animate-pulse-slow delay-1000"></div>
+              <div className="absolute top-1/2 -left-8 w-12 h-12 bg-portfolio-deep-purple rounded-full opacity-50 animate-bounce-gentle delay-500"></div>
             </div>
           </div>
         </div>
