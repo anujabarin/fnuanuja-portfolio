@@ -62,7 +62,7 @@ export default {
 					'light-blue': 'hsl(var(--portfolio-light-blue))',
 					purple: 'hsl(var(--portfolio-purple))',
 					gray: 'hsl(var(--portfolio-gray))',
-					'light-gray': 'hsl(var(--portfolio-light-gray))'
+					'dark-gray': 'hsl(var(--portfolio-dark-gray))'
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
