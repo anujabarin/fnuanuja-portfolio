@@ -25,7 +25,7 @@ const Hero = () => {
           <div className="text-center lg:text-left">
             <div className="mb-6">
               <h1 className="font-heading text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight animate-fade-in">
-                Hi, I'm <span className="text-primary-glow animate-glow">Anuja</span>
+                Hi, I'm Anuja
               </h1>
               <h2 className="font-heading text-xl lg:text-2xl text-white/90 mb-6">
                 Software Engineer | Backend & Data Enthusiast
@@ -55,19 +55,43 @@ const Hero = () => {
             
             {/* Social links */}
             <div className="flex gap-4 justify-center lg:justify-start">
-              <Button variant="ghost" size="icon" className="text-white hover:bg-white/10 hover-scale">
-                <Github className="h-5 w-5" />
-              </Button>
-              <Button variant="ghost" size="icon" className="text-white hover:bg-white/10 hover-scale">
-                <Linkedin className="h-5 w-5" />
-              </Button>
-              <Button variant="ghost" size="icon" className="text-white hover:bg-white/10 hover-scale">
-                <Mail className="h-5 w-5" />
-              </Button>
-              <Button variant="ghost" size="icon" className="text-white hover:bg-white/10 hover-scale">
-                <Download className="h-5 w-5" />
-              </Button>
-            </div>
+  {/* GitHub */}
+  <a 
+    href="https://github.com/anujabarin" 
+    target="_blank" 
+    rel="noopener noreferrer"
+  >
+    <Button variant="ghost" size="icon" className="text-white hover:bg-white/10 hover-scale">
+      <Github className="h-5 w-5" />
+    </Button>
+  </a>
+
+  {/* LinkedIn */}
+  <a 
+    href="https://www.linkedin.com/in/fnuanuja/" 
+    target="_blank" 
+    rel="noopener noreferrer"
+  >
+    <Button variant="ghost" size="icon" className="text-white hover:bg-white/10 hover-scale">
+      <Linkedin className="h-5 w-5" />
+    </Button>
+  </a>
+
+  {/* Email */}
+  <a href="mailto:fnuanuja25@gmail.com">
+    <Button variant="ghost" size="icon" className="text-white hover:bg-white/10 hover-scale">
+      <Mail className="h-5 w-5" />
+    </Button>
+  </a>
+
+  {/* Resume Download */}
+  <a href="/FNU_Anuja_SDE.pdf" download>
+    <Button variant="ghost" size="icon" className="text-white hover:bg-white/10 hover-scale">
+      <Download className="h-5 w-5" />
+    </Button>
+  </a>
+</div>
+
           </div>
           
           {/* Image */}

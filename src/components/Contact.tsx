@@ -210,10 +210,13 @@ const Contact = () => {
                   
                   {/* Resume download */}
                   <div className="pt-4 border-t border-border">
-                    <Button className="w-full shadow-button" variant="outline">
-                      <Download className="h-4 w-4 mr-2" />
-                      Download Resume
-                    </Button>
+                    <a href="/FNU_Anuja_SDE.pdf" download className="w-full">
+  <Button variant="outline" className="w-full shadow-button">
+    <Download className="h-4 w-4 mr-2" />
+    Download Resume
+  </Button>
+</a>
+
                   </div>
                 </CardContent>
               </Card>
