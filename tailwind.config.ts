@@ -58,10 +58,10 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				portfolio: {
-					purple: 'hsl(var(--portfolio-purple))',
-					'light-purple': 'hsl(var(--portfolio-light-purple))',
-					'deep-purple': 'hsl(var(--portfolio-deep-purple))',
-					pink: 'hsl(var(--portfolio-pink))',
+					blue: 'hsl(var(--portfolio-blue))',
+					'light-blue': 'hsl(var(--portfolio-light-blue))',
+					'deep-blue': 'hsl(var(--portfolio-deep-blue))',
+					cyan: 'hsl(var(--portfolio-cyan))',
 					gray: 'hsl(var(--portfolio-gray))',
 					'dark-gray': 'hsl(var(--portfolio-dark-gray))'
 				},
@@ -119,8 +119,8 @@ export default {
 					'66%': { transform: 'translateY(20px) rotate(240deg)', opacity: '0.4' }
 				},
 				'glow': {
-					'from': { boxShadow: '0 0 20px hsl(var(--portfolio-purple) / 0.2)' },
-					'to': { boxShadow: '0 0 30px hsl(var(--portfolio-light-purple) / 0.4), 0 0 40px hsl(var(--portfolio-pink) / 0.2)' }
+					'from': { boxShadow: '0 0 20px hsl(var(--portfolio-blue) / 0.2)' },
+					'to': { boxShadow: '0 0 30px hsl(var(--portfolio-light-blue) / 0.4), 0 0 40px hsl(var(--portfolio-cyan) / 0.2)' }
 				}
 			},
 			animation: {

@@ -80,10 +80,10 @@ const Hero = () => {
                   className="w-full h-full object-cover hover-scale"
                 />
               </div>
-              {/* Floating elements with new colors */}
-              <div className="absolute -top-4 -right-4 w-20 h-20 bg-portfolio-pink rounded-full opacity-80 animate-pulse-slow"></div>
-              <div className="absolute -bottom-6 -left-6 w-16 h-16 bg-portfolio-light-purple rounded-full opacity-60 animate-pulse-slow delay-1000"></div>
-              <div className="absolute top-1/2 -left-8 w-12 h-12 bg-portfolio-deep-purple rounded-full opacity-50 animate-bounce-gentle delay-500"></div>
+              {/* Floating elements with blue colors */}
+              <div className="absolute -top-4 -right-4 w-20 h-20 bg-portfolio-cyan rounded-full opacity-80 animate-pulse-slow"></div>
+              <div className="absolute -bottom-6 -left-6 w-16 h-16 bg-portfolio-light-blue rounded-full opacity-60 animate-pulse-slow delay-1000"></div>
+              <div className="absolute top-1/2 -left-8 w-12 h-12 bg-portfolio-deep-blue rounded-full opacity-50 animate-bounce-gentle delay-500"></div>
             </div>
           </div>
         </div>
