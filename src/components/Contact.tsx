@@ -37,19 +37,19 @@ const Contact = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "anuja@example.com",
-      href: "mailto:anuja@example.com"
+      value: "fnuanuja25@gmail.com",
+      href: "mailto:fnuanuja25@gmail.com"
     },
     {
       icon: Phone,
       label: "Phone",
-      value: "+1 (555) 123-4567",
+      value: "+1 (945) 274-8901",
       href: "tel:+15551234567"
     },
     {
       icon: MapPin,
       label: "Location",
-      value: "San Francisco, CA",
+      value: "Dallas, TX",
       href: "#"
     }
   ];
@@ -58,14 +58,14 @@ const Contact = () => {
     {
       icon: Github,
       label: "GitHub",
-      href: "https://github.com/anuja",
-      username: "@anuja"
+      href: "https://github.com/anujabarin",
+      username: "@anujabarin"
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
-      href: "https://linkedin.com/in/anuja",
-      username: "anuja"
+      href: "https://www.linkedin.com/in/fnuanuja/",
+      username: "fnuanuja"
     }
   ];
 
