@@ -161,7 +161,7 @@ const About = () => {
                     Strong interpersonal skills
                   </Badge>
                   <Badge variant="secondary" className="px-4 py-2 text-sm hover:bg-primary hover:text-primary-foreground transition-colors cursor-default">
-                    Cooperative mindset
+                    Cooperative mindse
                   </Badge>
                 </div>
               </CardContent>
