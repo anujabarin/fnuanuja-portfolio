@@ -56,7 +56,7 @@ const Navigation = () => {
             onClick={() => scrollToSection('home')}
             className="font-heading font-bold text-xl text-foreground hover:text-primary transition-colors"
           >
-            Anuja
+            
           </button>
           
           <div className="hidden md:flex items-center space-x-1">
