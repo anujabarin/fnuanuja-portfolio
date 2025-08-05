@@ -9,7 +9,7 @@ const About = () => {
   const keyStrengths = [
     {
       icon: Code,
-      title: "Backend Enginering",
+      title: "Backend Engineering",
       description: "Scalable server-side applications"
     },
     {
