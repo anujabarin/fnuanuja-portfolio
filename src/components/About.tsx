@@ -1,8 +1,11 @@
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
+import { useScrollReveal } from '@/hooks/use-scroll-reveal';
 import { Code, Database, Cloud, Zap, Users, BookOpen } from 'lucide-react';
 
 const About = () => {
+  const { ref, isVisible } = useScrollReveal();
+  
   const keyStrengths = [
     {
       icon: Code,
@@ -44,7 +47,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 relative overflow-hidden">
+    <section id="about" className="py-20 relative overflow-hidden" ref={ref}>
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-card to-background"></div>
       
@@ -55,7 +58,9 @@ const About = () => {
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-6xl mx-auto">
+        <div className={`max-w-6xl mx-auto transition-all duration-1000 ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}>
           {/* Section header */}
           <div className="text-center mb-16">
             <h2 className="font-heading text-4xl lg:text-5xl font-bold text-foreground mb-6 animate-fade-in">

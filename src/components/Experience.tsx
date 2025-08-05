@@ -1,8 +1,11 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { useScrollReveal } from '@/hooks/use-scroll-reveal';
 import { Calendar, MapPin } from 'lucide-react';
 
 const Experience = () => {
+  const { ref, isVisible } = useScrollReveal();
+  
   const experiences = [
     {
       title: "Senior Software Engineer",
@@ -31,9 +34,11 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="py-20 bg-background">
+    <section id="experience" className="py-20 bg-background" ref={ref}>
       <div className="container mx-auto px-6">
-        <div className="max-w-4xl mx-auto">
+        <div className={`max-w-4xl mx-auto transition-all duration-1000 delay-200 ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}>
           {/* Section header */}
           <div className="text-center mb-16">
             <h2 className="font-heading text-3xl lg:text-4xl font-bold text-foreground mb-4">

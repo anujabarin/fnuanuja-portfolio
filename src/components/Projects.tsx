@@ -1,9 +1,12 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import { useScrollReveal } from '@/hooks/use-scroll-reveal';
 import { ExternalLink, Github } from 'lucide-react';
 
 const Projects = () => {
+  const { ref, isVisible } = useScrollReveal();
+  
   const projects = [
     {
       title: "Distributed Analytics Platform",
@@ -48,9 +51,11 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-background">
+    <section id="projects" className="py-20 bg-background" ref={ref}>
       <div className="container mx-auto px-6">
-        <div className="max-w-6xl mx-auto">
+        <div className={`max-w-6xl mx-auto transition-all duration-1000 delay-300 ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}>
           {/* Section header */}
           <div className="text-center mb-16">
             <h2 className="font-heading text-3xl lg:text-4xl font-bold text-foreground mb-4">

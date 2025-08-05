@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { useScrollReveal } from '@/hooks/use-scroll-reveal';
 import { Code, Database, Cloud, Wrench, Star } from 'lucide-react';
 
 const Skills = () => {
