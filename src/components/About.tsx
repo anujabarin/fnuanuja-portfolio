@@ -15,7 +15,7 @@ const About = () => {
     {
       icon: Database,
       title: "Data Systems",
-      description: "Big data & analytics platforms"
+      description: "Data visualize & analytics platforms"
     },
     {
       icon: Cloud,
@@ -30,7 +30,7 @@ const About = () => {
     {
       icon: Users,
       title: "API Development",
-      description: "RESTful & GraphQL APIs"
+      description: "RESTful APIs"
     },
     {
       icon: BookOpen,
@@ -40,8 +40,8 @@ const About = () => {
   ];
 
   const highlights = [
-    { number: "5+", label: "Years Experience" },
-    { number: "50+", label: "Projects Completed" },
+    { number: "2+", label: "Years Experience" },
+    { number: "8+", label: "Projects undertaken" },
     { number: "10+", label: "Technologies Mastered" },
     { number: "∞", label: "Problems Solved" }
   ];
@@ -64,11 +64,12 @@ const About = () => {
           {/* Section header */}
           <div className="text-center mb-16">
             <h2 className="font-heading text-4xl lg:text-5xl font-bold text-foreground mb-6 animate-fade-in">
-              About <span className="text-primary">Me</span>
+              <span className="text-primary">About Me</span>
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-8 rounded-full"></div>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              A passionate software engineer crafting scalable solutions and turning complex problems into elegant code
+              Passionate about building scalable systems and distributed architectures. I turn complex
+          data into clean, efficient solutions and thrive across the SDLC from design to deployment.
             </p>
           </div>
 
@@ -89,23 +90,23 @@ const About = () => {
             {/* Story */}
             <div className="space-y-6 animate-fade-in">
               <h3 className="font-heading text-2xl font-bold text-foreground mb-4">
-                My Journey
+                <span className="text-primary">My Journey</span>
               </h3>
               <p className="text-lg text-foreground leading-relaxed">
-                With <span className="text-primary font-semibold">5+ years of experience</span> in software engineering, 
-                I've evolved from a curious computer science student to a seasoned backend architect. My passion lies in 
-                building <span className="text-accent font-semibold">scalable systems</span> that handle real-world complexity.
+                With over 2 years of experience in software engineering, I’ve grown from a curious computer student to a confident backend engineer, blending hands on industry work with academic exploration. 
+              </p>
+              <p className="text-lg text-foreground leading-relaxed">
+                During my time at Accenture, I contributed to enterprise scale applications, working with cross-functional teams to deliver robust, efficient solutions. At university, I led Cargo Connect prject, where we optimized airport freight movement without infrastructure changes, an experience that showed me the real impact of thoughtful software design.
+
+              </p>
+              <p className="text-lg text-foreground leading-relaxed">
+                I specialize in crafting robust backend solutions and optimizing performance for applications that serve millions. Every line of code I write is driven by the question: 
+                <em className="text-primary">"How can this scale better?"</em> I find deep satisfaction in turning complex challenges into clean, maintainable solutions.
               </p>
               
               <p className="text-lg text-foreground leading-relaxed">
-                I specialize in crafting robust backend solutions, designing efficient data pipelines, and optimizing 
-                performance for applications that serve millions. Every line of code I write is driven by the question: 
-                <em className="text-primary">"How can this scale better?"</em>
-              </p>
-              
-              <p className="text-lg text-foreground leading-relaxed">
-                Beyond coding, I'm an active contributor to open source projects and love sharing knowledge through 
-                technical blogs and community talks. Learning never stops in tech, and I embrace that challenge every day.
+                For me, growth comes from collaboration, curiosity, and a constant drive to learn.
+
               </p>
             </div>
 
@@ -140,7 +141,7 @@ const About = () => {
             <Card className="bg-gradient-to-r from-primary/10 to-accent/10 border-primary/30 backdrop-blur-sm">
               <CardContent className="p-8">
                 <h3 className="font-heading text-2xl font-bold text-foreground mb-4">
-                  Let's Build Something Amazing Together
+                  Let's Build and Grow Together
                 </h3>
                 <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
                   I'm always excited about new challenges and opportunities to create innovative solutions. 
@@ -148,13 +149,19 @@ const About = () => {
                 </p>
                 <div className="flex gap-3 justify-center flex-wrap">
                   <Badge variant="secondary" className="px-4 py-2 text-sm hover:bg-primary hover:text-primary-foreground transition-colors cursor-default">
-                    Open to opportunities
+                    Exploring new roles
                   </Badge>
                   <Badge variant="secondary" className="px-4 py-2 text-sm hover:bg-accent hover:text-accent-foreground transition-colors cursor-default">
                     Remote friendly
                   </Badge>
                   <Badge variant="secondary" className="px-4 py-2 text-sm hover:bg-primary hover:text-primary-foreground transition-colors cursor-default">
-                    Team player
+                    Driven by teamwork
+                  </Badge>
+                  <Badge variant="secondary" className="px-4 py-2 text-sm hover:bg-accent hover:text-primary-foreground transition-colors cursor-default">
+                    Strong interpersonal skills
+                  </Badge>
+                  <Badge variant="secondary" className="px-4 py-2 text-sm hover:bg-primary hover:text-primary-foreground transition-colors cursor-default">
+                    Cooperative mindset
                   </Badge>
                 </div>
               </CardContent>
