@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto text-center">
           {/* Social links */}
-          <div className="flex justify-center gap-4 mb-8">
+          {/* <div className="flex justify-center gap-4 mb-8">
             <Button variant="ghost" size="icon" className="text-background hover:bg-background/10">
               <Github className="h-5 w-5" />
             </Button>
@@ -19,7 +19,7 @@ const Footer = () => {
             <Button variant="ghost" size="icon" className="text-background hover:bg-background/10">
               <Mail className="h-5 w-5" />
             </Button>
-          </div>
+          </div> */}
 
           {/* Copyright */}
           <div className="border-t border-background/20 pt-8">

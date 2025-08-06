@@ -38,17 +38,17 @@ const Skills = () => {
   const coreCompetencies = [
     {
       title: "System Architecture",
-      skills: ["Microservices", "Event-Driven Systems", "Distributed Computing"],
+      skills: ["Modular design", "Distributed Computing","Scalability"],
       icon: "🏗️"
     },
     {
-      title: "API Development",
-      skills: ["RESTful APIs", "GraphQL", "gRPC"],
+      title: "Backend Engineering",
+      skills: ["RESTful APIs","Microservices"],
       icon: "🔗"
     },
     {
-      title: "Data Engineering",
-      skills: ["ETL Pipelines", "Real-time Processing", "Big Data"],
+      title: "Frontend Development",
+      skills: ["Responsive UI", "ReactJS"],
       icon: "📊"
     },
     {
@@ -74,7 +74,7 @@ const Skills = () => {
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-8 rounded-full"></div>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              A comprehensive toolkit for building modern, scalable software solutions with cutting-edge technologies
+              Empowering modern software development with scalable architecture and cutting edge technologies
             </p>
           </div>
 
@@ -145,33 +145,7 @@ const Skills = () => {
               ))}
             </div>
           </div>
-
-          {/* Experience highlight */}
-          <Card className="bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10 border-primary/30 backdrop-blur-sm">
-            <CardContent className="p-8 text-center">
-              <div className="flex items-center justify-center gap-2 mb-4">
-                <Star className="h-6 w-6 text-primary fill-primary" />
-                <h3 className="font-heading text-2xl font-bold text-foreground">Professional Excellence</h3>
-                <Star className="h-6 w-6 text-primary fill-primary" />
-              </div>
-              <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-6">
-                With <span className="text-primary font-semibold">5+ years</span> of hands-on experience, I've mastered 
-                the full technology stack with deep expertise in backend systems, data engineering, and cloud-native architectures. 
-                I continuously evolve with emerging technologies and industry best practices.
-              </p>
-              <div className="flex gap-4 justify-center flex-wrap">
-                <Badge variant="secondary" className="px-4 py-2 text-sm bg-primary/20 text-primary border-primary/30">
-                  Full-Stack Development
-                </Badge>
-                <Badge variant="secondary" className="px-4 py-2 text-sm bg-accent/20 text-accent border-accent/30">
-                  Scalable Architecture
-                </Badge>
-                <Badge variant="secondary" className="px-4 py-2 text-sm bg-primary/20 text-primary border-primary/30">
-                  Performance Optimization
-                </Badge>
-              </div>
-            </CardContent>
-          </Card>
+          
         </div>
       </div>
     </section>
