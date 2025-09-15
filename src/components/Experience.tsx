@@ -39,15 +39,15 @@ const Experience = () => {
       details: [
         "Implemented Kafka DLQ + retries; improved pipeline reliability to 99.95%.",
         "Designed search schema in ES; query time improved by 55%.",
-        "Introduced tracing (OpenTelemetry) to cut MTTR by ~40%."
+        "Introduced tracing (OpenTelemetry)My to cut MTTR by ~40%."
       ],
       links: [{ label: "Architecture notes", href: "#" }]
     },
     {
       title: "Software Developer",
-      company: "StartupXYZ",
-      location: "Austin, TX",
-      period: "2019 - 2020",
+      company: "Tata Steel",
+      location: "Jamshedpur, India",
+      period: "2019 - 2019",
       description:
         "Full-stack development for a fintech startup. Implemented secure payment processing and contributed to 3x user growth through feature development.",
       technologies: ["Python", "Flask", "React", "MySQL", "Stripe API"],
