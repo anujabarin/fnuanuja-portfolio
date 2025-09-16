@@ -31,7 +31,7 @@ const Projects = () => {
         "Flask","PostgreSQL","Google Maps API","Kotlin","Jetpack Compose","REST APIs","Docker","JWT"
       ],
       githubUrl: "https://github.com/anujabarin/Cargo_Connect_main",
-      liveUrl: "#"
+
     },
     {
       title: "Churn Prediction Model",
@@ -134,7 +134,7 @@ const Projects = () => {
           {/* View more button */}
           <div className="text-center mt-12">
             <Button className="shadow-button" asChild>
-              <a href="#" target="_blank" rel="noreferrer">
+              <a href="https://github.com/anujabarin" target="_blank" rel="noreferrer">
                 <Github className="h-4 w-4 mr-2" />
                 View All Projects on GitHub
               </a>

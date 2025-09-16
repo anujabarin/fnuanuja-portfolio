@@ -1,39 +1,10 @@
-import { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Label } from '@/components/ui/label';
-import { useToast } from '@/hooks/use-toast';
 import { useScrollReveal } from '@/hooks/use-scroll-reveal';
-import { Mail, MapPin, Phone, Github, Linkedin, Download } from 'lucide-react';
+import { Mail, MapPin, Github, Linkedin, Download } from 'lucide-react';
 
 const Contact = () => {
-  const { toast } = useToast();
   const { ref, isVisible } = useScrollReveal();
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Here you would typically send the form data to your backend
-    toast({
-      title: "Message sent!",
-      description: "Thank you for reaching out. I'll get back to you soon.",
-    });
-    setFormData({ name: '', email: '', subject: '', message: '' });
-  };
 
   const contactInfo = [
     {
@@ -41,12 +12,6 @@ const Contact = () => {
       label: "Email",
       value: "fnuanuja25@gmail.com",
       href: "mailto:fnuanuja25@gmail.com"
-    },
-    {
-      icon: Phone,
-      label: "Phone",
-      value: "+1 (945) 274-8901",
-      href: "tel:+15551234567"
     },
     {
       icon: MapPin,
@@ -74,9 +39,11 @@ const Contact = () => {
   return (
     <section id="contact" className="py-20 bg-background" ref={ref}>
       <div className="container mx-auto px-6">
-        <div className={`max-w-4xl mx-auto transition-all duration-1000 delay-600 ${
-          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-        }`}>
+        <div
+          className={`max-w-4xl mx-auto transition-all duration-1000 delay-600 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
+        >
           {/* Section header */}
           <div className="text-center mb-16">
             <h2 className="font-heading text-3xl lg:text-4xl font-bold text-foreground mb-4">
@@ -88,143 +55,72 @@ const Contact = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* Contact form */}
+          <div className="space-y-8">
+            {/* Contact details */}
             <Card className="shadow-card border-border/50">
               <CardHeader>
                 <CardTitle className="font-heading text-xl text-foreground">
-                  Send me a message
+                  Contact Information
                 </CardTitle>
               </CardHeader>
-              <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <Label htmlFor="name">Name</Label>
-                      <Input
-                        id="name"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        required
-                        placeholder="Your name"
-                      />
+              <CardContent className="space-y-4">
+                {contactInfo.map((item, index) => (
+                  <div key={index} className="flex items-center gap-4">
+                    <div className="p-2 bg-primary/10 rounded-lg">
+                      <item.icon className="h-5 w-5 text-primary" />
                     </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="email">Email</Label>
-                      <Input
-                        id="email"
-                        name="email"
-                        type="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        required
-                        placeholder="your.email@example.com"
-                      />
+                    <div>
+                      <p className="font-medium text-foreground">{item.label}</p>
+                      <a
+                        href={item.href}
+                        className="text-muted-foreground hover:text-primary transition-colors"
+                      >
+                        {item.value}
+                      </a>
                     </div>
                   </div>
-                  
-                  <div className="space-y-2">
-                    <Label htmlFor="subject">Subject</Label>
-                    <Input
-                      id="subject"
-                      name="subject"
-                      value={formData.subject}
-                      onChange={handleInputChange}
-                      required
-                      placeholder="What's this about?"
-                    />
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <Label htmlFor="message">Message</Label>
-                    <Textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      required
-                      placeholder="Your message..."
-                      className="min-h-[120px]"
-                    />
-                  </div>
-                  
-                  <Button type="submit" className="w-full shadow-button">
-                    Send Message
-                  </Button>
-                </form>
+                ))}
               </CardContent>
             </Card>
 
-            {/* Contact info */}
-            <div className="space-y-8">
-              {/* Contact details */}
-              <Card className="shadow-card border-border/50">
-                <CardHeader>
-                  <CardTitle className="font-heading text-xl text-foreground">
-                    Contact Information
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  {contactInfo.map((item, index) => (
-                    <div key={index} className="flex items-center gap-4">
-                      <div className="p-2 bg-primary/10 rounded-lg">
-                        <item.icon className="h-5 w-5 text-primary" />
-                      </div>
-                      <div>
-                        <p className="font-medium text-foreground">{item.label}</p>
-                        <a 
-                          href={item.href} 
-                          className="text-muted-foreground hover:text-primary transition-colors"
-                        >
-                          {item.value}
-                        </a>
-                      </div>
+            {/* Social links */}
+            <Card className="shadow-card border-border/50">
+              <CardHeader>
+                <CardTitle className="font-heading text-xl text-foreground">
+                  Connect with me
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                {socialLinks.map((link, index) => (
+                  <div key={index} className="flex items-center gap-4">
+                    <div className="p-2 bg-primary/10 rounded-lg">
+                      <link.icon className="h-5 w-5 text-primary" />
                     </div>
-                  ))}
-                </CardContent>
-              </Card>
-
-              {/* Social links */}
-              <Card className="shadow-card border-border/50">
-                <CardHeader>
-                  <CardTitle className="font-heading text-xl text-foreground">
-                    Connect with me
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  {socialLinks.map((link, index) => (
-                    <div key={index} className="flex items-center gap-4">
-                      <div className="p-2 bg-primary/10 rounded-lg">
-                        <link.icon className="h-5 w-5 text-primary" />
-                      </div>
-                      <div>
-                        <p className="font-medium text-foreground">{link.label}</p>
-                        <a 
-                          href={link.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-muted-foreground hover:text-primary transition-colors"
-                        >
-                          {link.username}
-                        </a>
-                      </div>
+                    <div>
+                      <p className="font-medium text-foreground">{link.label}</p>
+                      <a
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-muted-foreground hover:text-primary transition-colors"
+                      >
+                        {link.username}
+                      </a>
                     </div>
-                  ))}
-                  
-                  {/* Resume download */}
-                  <div className="pt-4 border-t border-border">
-                    <a href="/FNU_Anuja_SDE.pdf" download className="w-full">
-  <Button variant="outline" className="w-full shadow-button">
-    <Download className="h-4 w-4 mr-2" />
-    Download Resume
-  </Button>
-</a>
-
                   </div>
-                </CardContent>
-              </Card>
-            </div>
+                ))}
+
+                {/* Resume download */}
+                <div className="pt-4 border-t border-border">
+                  <a href="/FNU_Anuja_SDE.pdf" download className="w-full">
+                    <Button variant="outline" className="w-full shadow-button">
+                      <Download className="h-4 w-4 mr-2" />
+                      Download Resume
+                    </Button>
+                  </a>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </div>

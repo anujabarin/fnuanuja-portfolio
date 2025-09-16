@@ -41,7 +41,7 @@ const About = () => {
 
   const highlights = [
     { number: "2+", label: "Years Experience" },
-    { number: "8+", label: "Projects undertaken" },
+    { number: "6+", label: "Projects undertaken" },
     { number: "10+", label: "Technologies Mastered" },
     { number: "∞", label: "Problems Solved" }
   ];
