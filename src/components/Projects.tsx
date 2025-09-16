@@ -30,7 +30,7 @@ const Projects = () => {
       technologies: [
         "Flask","PostgreSQL","Google Maps API","Kotlin","Jetpack Compose","REST APIs","Docker","JWT"
       ],
-      githubUrl: "#",
+      githubUrl: "https://github.com/anujabarin/Cargo_Connect_main",
       liveUrl: "#"
     },
     {
