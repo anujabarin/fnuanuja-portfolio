@@ -1,68 +1,68 @@
-import { Card, CardContent } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { useScrollReveal } from '@/hooks/use-scroll-reveal';
-import { Calendar, MapPin, ChevronDown } from 'lucide-react';
-import { useState } from 'react';
+import { Card, CardContent } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { useScrollReveal } from '@/hooks/use-scroll-reveal'
+import { Calendar, MapPin, ChevronDown } from 'lucide-react'
+import { useState } from 'react'
 
 const Experience = () => {
-  const { ref, isVisible } = useScrollReveal();
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const { ref, isVisible } = useScrollReveal()
+  const [openIndex, setOpenIndex] = useState<number | null>(null)
 
+  // Sourced from your resume (FNU_Anuja_SDE.pdf)
   const experiences = [
     {
-      title: "Senior Software Engineer",
-      company: "TechCorp Solutions",
-      location: "San Francisco, CA",
-      period: "2022 - Present",
+      title: 'Software Engineer',
+      company: 'Accenture',
+      location: 'India',
+      period: 'Aug 2021 – Jul 2023',
       description:
-        "Leading backend development for a high-traffic e-commerce platform serving 2M+ users. Architected microservices infrastructure and improved system performance by 40%.",
-      technologies: ["Python", "Django", "PostgreSQL", "Redis", "AWS", "Docker"],
-      details: [
-        "Cut P95 latency from 620ms → 360ms by optimizing caching and DB indexes.",
-        "Designed blue/green deploys and rollback playbooks to reduce downtime.",
-        "Mentored 4 engineers; introduced coding standards and review checklists.",
-        "Partnered with Product to A/B test features, lifting conversion by 3.2%."
+        'Full‑stack engineer on cross‑disciplinary teams delivering scalable services, REST APIs, and data solutions in an Agile/Scrum environment. Focused on performance, reliability, and UI/UX improvements.',
+      technologies: [
+        'Java',
+        'Spring Boot',
+        'Python',
+        'React',
+        'Node.js',
+        'REST APIs',
+        'MongoDB',
+        'MySQL',
+        'Tableau',
+        'Microsoft Excel',
+        'JSP/Servlets',
+        'Git',
+        'GitHub',
+        'AWS'
       ],
-      links: [
-        { label: "Case study", href: "#" },
-        { label: "Service playbook", href: "#" }
-      ]
+      details: [
+        'Shipped scalable data services and platform integrations; improved overall system efficiency by ~30%.',
+        'Designed and implemented RESTful APIs for distributed systems, reducing end‑to‑end latency.',
+        'Optimized queries in MongoDB/MySQL, improving data retrieval speed by ~40%.',
+        'Enhanced UI/UX using JSP/Servlets, driving ~25% higher user engagement.',
+        'Created Tableau/Excel dashboards to accelerate business decision‑making by ~40%.',
+        'Led onboarding for three new engineers and improved team delivery with Scrum ceremonies and coding standards.',
+        'Contributed to software design modeling and architecture planning, cutting defect rates by ~30%.'
+      ],
+      links: [] as { label: string; href: string }[]
     },
     {
-      title: "Backend Engineer",
-      company: "DataFlow Inc",
-      location: "Remote",
-      period: "2020 - 2022",
+      title: 'Intern',
+      company: 'Tata Steel',
+      location: 'Jamshedpur, India',
+      period: 'Jun 2019 – Aug 2019',
       description:
-        "Built scalable data processing pipelines handling 10TB+ daily data. Developed RESTful APIs and implemented real-time analytics dashboard.",
-      technologies: ["Java", "Spring Boot", "Apache Kafka", "MongoDB", "Elasticsearch"],
+        'Built responsive web features and integrated cloud/third‑party APIs to improve functionality and performance.',
+      technologies: ['React', 'JavaScript', 'Cloud APIs'],
       details: [
-        "Implemented Kafka DLQ + retries; improved pipeline reliability to 99.95%.",
-        "Designed search schema in ES; query time improved by 55%.",
-        "Introduced tracing (OpenTelemetry)My to cut MTTR by ~40%."
+        'Developed a dynamic, responsive portfolio site with React/JavaScript; improved performance by ~35%.',
+        'Integrated cloud services and third‑party APIs for dynamic content, better UX, and faster interactions.'
       ],
-      links: [{ label: "Architecture notes", href: "#" }]
-    },
-    {
-      title: "Software Developer",
-      company: "Tata Steel",
-      location: "Jamshedpur, India",
-      period: "2019 - 2019",
-      description:
-        "Full-stack development for a fintech startup. Implemented secure payment processing and contributed to 3x user growth through feature development.",
-      technologies: ["Python", "Flask", "React", "MySQL", "Stripe API"],
-      details: [
-        "Led PCI-aware integration with Stripe + idempotent webhooks.",
-        "Shipped onboarding flow that reduced drop-off by 18%.",
-        "Built internal admin tools to speed support ops by 30%."
-      ],
-      links: [{ label: "Security checklist", href: "#" }]
+      links: [] as { label: string; href: string }[]
     }
-  ];
+  ]
 
   const toggle = (idx: number) => {
-    setOpenIndex(openIndex === idx ? null : idx);
-  };
+    setOpenIndex(openIndex === idx ? null : idx)
+  }
 
   return (
     <section id="experience" className="py-20 bg-background" ref={ref}>
@@ -132,9 +132,7 @@ const Experience = () => {
                         </div>
                       </div>
 
-                      <p className="text-foreground leading-relaxed mb-4">
-                        {exp.description}
-                      </p>
+                      <p className="text-foreground leading-relaxed mb-4">{exp.description}</p>
 
                       {/* Technologies */}
                       <div className="flex flex-wrap gap-2">
@@ -154,18 +152,16 @@ const Experience = () => {
                         `}
                       >
                         <div className="rounded-lg border mt-4 p-5 bg-muted/30">
-                          <p className="text-sm font-semibold mb-3 text-muted-foreground">
-                            More details
-                          </p>
+                          <p className="text-sm font-semibold mb-3 text-muted-foreground">More details</p>
                           <ul className="list-disc pl-5 space-y-2 text-sm">
-                            {exp.details.map((d, i) => (
+                            {exp.details.map((d: string, i: number) => (
                               <li key={i}>{d}</li>
                             ))}
                           </ul>
 
                           {exp.links?.length ? (
                             <div className="flex flex-wrap gap-3 mt-4">
-                              {exp.links.map((l, i) => (
+                              {exp.links.map((l: { label: string; href: string }, i: number) => (
                                 <a
                                   key={i}
                                   href={l.href}
@@ -189,7 +185,7 @@ const Experience = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Experience;
+export default Experience

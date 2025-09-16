@@ -2,6 +2,7 @@ import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
 import Experience from '@/components/Experience';
+import LeadershipCampusWork from '@/components/LeadershipCampusWork';  
 import Projects from '@/components/Projects';
 import Skills from '@/components/Skills';
 import Certificates from '@/components/Certificates';
@@ -15,6 +16,7 @@ const Index = () => {
       <Hero />
       <About />
       <Experience />
+      <LeadershipCampusWork /> 
       <Projects />
       <Skills />
       <Certificates />
@@ -25,3 +27,4 @@ const Index = () => {
 };
 
 export default Index;
+

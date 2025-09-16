@@ -27,7 +27,7 @@ const Footer = () => {
               © {currentYear} Anuja. All rights reserved.
             </p>
             <p className="text-background/60 text-sm flex items-center justify-center gap-1">
-              Built with <Heart className="h-4 w-4 text-red-400 fill-current" /> using React & TypeScript
+              Built using React & TypeScript
             </p>
           </div>
         </div>
