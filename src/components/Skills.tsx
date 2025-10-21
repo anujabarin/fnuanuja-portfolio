@@ -85,7 +85,7 @@ const Skills = () => {
         >
           <div className="text-center mb-16">
             <h2 className="font-heading text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              Technical <span className="text-primary">Skills</span>
+              Technical Skills</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Technologies and tools I work with
