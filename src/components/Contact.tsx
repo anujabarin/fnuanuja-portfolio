@@ -112,7 +112,7 @@ const Contact = () => {
 
                 {/* Resume download */}
                 <div className="pt-4 border-t border-border">
-                  <a href="/FNU_Anuja_SDE.pdf" download className="w-full">
+                  <a href="/FNU_Anuja.pdf" download className="w-full">
                     <Button variant="outline" className="w-full shadow-button">
                       <Download className="h-4 w-4 mr-2" />
                       Download Resume

@@ -99,7 +99,7 @@ const Hero = () => {
               <Mail className="h-5 w-5" />
             </Button>
           </a>
-          <a href="/FNU_Anuja_SDE.pdf" download>
+          <a href="/FNU_Anuja.pdf" download>
             <Button variant="ghost" size="icon" className="text-foreground hover:bg-foreground/5 hover-scale">
               <Download className="h-5 w-5" />
             </Button>
