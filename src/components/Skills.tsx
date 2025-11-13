@@ -27,8 +27,7 @@ const Skills = () => {
         'Python',
         'Flask',
         'Node.js',
-        'REST APIs',
-        'Scala'
+        'REST APIs'
       ]
     },
     {
@@ -38,7 +37,6 @@ const Skills = () => {
         'React',
         'JavaScript',
         'HTML/CSS',
-        'Angular',
         'JSP/Servlets'
       ]
     },
@@ -57,11 +55,7 @@ const Skills = () => {
       icon: Code,
       skills: ['Tableau', 'Microsoft Excel', 'Data Pipelines']
     },
-    {
-      title: 'Mobile',
-      icon: Cloud,
-      skills: ['Android', 'Kotlin', 'Jetpack Compose']
-    },
+
     {
       title: 'Software Engineering',
       icon: Code,
